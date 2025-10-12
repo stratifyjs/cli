@@ -1,13 +1,15 @@
 import { createHooks } from "@stratify/core";
+import { versionAdapter } from "../adapters/version.adapter";
 
 export const httpHooks = createHooks({
   type: "http",
-  name: "http-core", // optional, used by tree printer
-  build: async ({ builder }) => {
-    // Example: add a simple security header for all responses
-    builder.addHook("onRequest", async (_req, reply) => {
-      reply.header("x-content-type-options", "nosniff");
+  name: "http-core",
+  adaps: { version: versionAdapter },
+  build: async ({ builder, adaps }) => {
+    // Adds headers to every request
+    builder.addHook("onSend", async (_req, reply, payload) => {
+      reply.header("x-fastify-version", adaps.version);
+      return payload;
     });
-    // You can add more lifecycle hooks as needed.
-  }
+  },
 });
