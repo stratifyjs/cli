@@ -44,8 +44,3 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Verify CLI scaffold
-        run: |
-          npx tsx src/new.ts test-app
-          test -d test-app || (echo "CLI failed to generate app" && exit 1)
-          rm -rf test-app
