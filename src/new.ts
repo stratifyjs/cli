@@ -34,6 +34,16 @@ async function replaceFileContent(p: string, replacer: (s: string) => string) {
   await fs.writeFile(p, replacer(s), "utf8");
 }
 
+async function finalizeGitignore(target: string) {
+  const src = join(target, "_gitignore");
+  const dest = join(target, ".gitignore");
+  try {
+    await fs.rename(src, dest);
+  } catch {
+    // no _gitignore — ignore silently
+  }
+}
+
 export async function runNew({ appName, templateDir }: NewOptions) {
   const target = resolve(process.cwd(), appName);
 
@@ -47,6 +57,8 @@ export async function runNew({ appName, templateDir }: NewOptions) {
   await replaceFileContent(pkgPath, (s) =>
     s.replace(/"name":\s*".+?"/, `"name": "${appName}"`)
   );
+
+  await finalizeGitignore(target);
 
   console.log(`\nScaffolded "${appName}" successfully.
 
