@@ -2,8 +2,21 @@
 import { resolve } from "node:path";
 import { runNew } from "./new.js";
 
+function sanitizeAppName(value?: string) {
+  if (!value) {
+    return undefined;
+  }
+
+  const trimmed = value.trim();
+  if (!trimmed || trimmed.includes("..") || /[\\/]/.test(trimmed)) {
+    return undefined;
+  }
+
+  return /^[a-z0-9][a-z0-9-_]*$/i.test(trimmed) ? trimmed : undefined;
+}
+
 async function main() {
-  const [cmd, name] = process.argv.slice(2);
+  const [cmd, rawName] = process.argv.slice(2).map((arg) => arg?.trim());
 
   if (!cmd || cmd !== "new") {
     console.error(`Usage:
@@ -15,8 +28,12 @@ Commands:
     process.exit(1);
   }
 
+  const name = sanitizeAppName(rawName);
+
   if (!name) {
-    console.error("Please provide an app name, e.g. npx stratify-cli new my-app");
+    console.error(
+      "Please provide a valid app name (letters, numbers, dashes or underscores), e.g. npx stratify-cli new my-app"
+    );
     process.exit(1);
   }
 
