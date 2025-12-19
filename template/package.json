@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@fastify/cors": "^10.0.0",
-    "@sinclair/typebox": "^0.32.30",
+    "@sinclair/typebox": "^0.34.41",
     "@stratify/core": "^0.2.0",
     "close-with-grace": "2.3.0"
   },
