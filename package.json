@@ -1,6 +1,6 @@
 {
   "name": "@stratify/cli",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "type": "module",
   "bin": {
     "stratify-cli": "./dist/bin.js"
