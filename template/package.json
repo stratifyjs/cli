@@ -12,18 +12,18 @@
   },
   "dependencies": {
     "@fastify/cors": "^11.2.0",
-    "@sinclair/typebox": "^0.34.48",
-    "@stratify/core": "^0.2.2",
-    "close-with-grace": "2.4.0"
+    "@sinclair/typebox": "^0.34.49",
+    "@stratify/core": "^0.2.4",
+    "close-with-grace": "2.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
-    "@types/node": "25.2.3",
+    "@types/node": "^25.6.2",
     "eslint": "^9.39.2",
     "eslint-plugin-import": "^2.32.0",
-    "prettier": "^3.8.1",
+    "prettier": "^3.8.3",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.55.0"
+    "typescript-eslint": "^8.59.2"
   }
 }
