@@ -1,5 +1,5 @@
 import { createHooks } from "@stratify/core";
-import { versionAdapter } from "../adapters/version.adapter";
+import { versionAdapter } from "../adapters/version.adapter.js";
 
 export const httpHooks = createHooks({
   type: "http",
