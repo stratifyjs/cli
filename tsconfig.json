@@ -9,6 +9,7 @@
     "declaration": false,
     "skipLibCheck": true,
     "strict": true,
+    "types": ["node"],
     "noEmitOnError": true
   },
   "include": ["src", "test"]
