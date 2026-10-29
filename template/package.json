@@ -13,7 +13,7 @@
   "dependencies": {
     "@fastify/cors": "^11.3.1",
     "@sinclair/typebox": "^0.34.52",
-    "@stratify/core": "^0.2.9",
+    "@stratify/core": "^0.2.10",
     "close-with-grace": "2.5.0"
   },
   "devDependencies": {
