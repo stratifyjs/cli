@@ -9,7 +9,7 @@ export default [
   {
     plugins: { import: pluginImport },
     rules: {
-      "import/no-unresolved": "off"
-    }
-  }
+      "import/no-unresolved": "off",
+    },
+  },
 ];

@@ -1,9 +1,9 @@
 {
   "name": "@stratify/cli",
-  "version": "0.2.10",
+  "version": "0.2.13",
   "type": "module",
   "bin": {
-    "stratify-cli": "./dist/bin.js"
+    "stratify-cli": "dist/bin.js"
   },
   "files": [
     "dist",
@@ -21,9 +21,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^25.9.4",
-    "tsx": "^4.23.1",
-    "typescript": "^5.9.3"
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
   },
   "keywords": [
     "stratify",

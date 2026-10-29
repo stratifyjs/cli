@@ -12,7 +12,7 @@ export const tasksController = createController({
       url: "/tasks",
       handler: async () => {
         return { tasks: await deps.tasksRepository.list() };
-      }
+      },
     });
 
     // GET /tasks/:id
@@ -20,7 +20,7 @@ export const tasksController = createController({
       method: "GET",
       url: "/tasks/:id",
       schema: {
-        params: Type.Object({ id: Type.String() })
+        params: Type.Object({ id: Type.String() }),
       },
       handler: async (req, reply) => {
         const task = await deps.tasksRepository.get(req.params.id);
@@ -28,7 +28,7 @@ export const tasksController = createController({
           return reply.code(404).send({ error: "Not Found" });
         }
         return task;
-      }
+      },
     });
 
     // POST /tasks
@@ -37,14 +37,14 @@ export const tasksController = createController({
       url: "/tasks",
       schema: {
         body: Type.Object({
-          title: Type.String({ minLength: 1 })
-        })
+          title: Type.String({ minLength: 1 }),
+        }),
       },
       handler: async (req) => {
         const { title } = req.body;
         const created = await deps.tasksRepository.create(title);
         return created;
-      }
+      },
     });
-  }
+  },
 });

@@ -20,7 +20,7 @@ describe("tasks routes", () => {
     const createRes = await app.inject({
       method: "POST",
       url: "/tasks",
-      payload: { title: "Write tests" }
+      payload: { title: "Write tests" },
     });
     assert.strictEqual(createRes.statusCode, 200);
     const created = createRes.json();
@@ -30,7 +30,7 @@ describe("tasks routes", () => {
 
     const getRes = await app.inject({
       method: "GET",
-      url: `/tasks/${created.id}`
+      url: `/tasks/${created.id}`,
     });
     assert.strictEqual(getRes.statusCode, 200);
     const fetched = getRes.json();

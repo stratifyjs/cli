@@ -3,12 +3,14 @@
 Generated with `@stratify/cli`.
 
 ## Scripts
+
 - `npm run dev` — run with tsx
 - `npm run build` — compile TypeScript to `dist/`
 - `npm start` — run compiled app
 - `npm test` — run integration tests with tsx
 
 ## Structure
+
 - `src/main.ts` — app entrypoint
 - `src/tasks` — domain components
   - `tasks.module.ts` — module composition
