@@ -9,7 +9,7 @@ export const corsInstaller = createInstaller({
   install: async ({ fastify }) => {
     await fastify.register(cors, {
       origin: true, // allow all origins for now
-      methods: ["GET", "POST", "PUT", "DELETE"]
+      methods: ["GET", "POST", "PUT", "DELETE"],
     });
-  }
+  },
 });

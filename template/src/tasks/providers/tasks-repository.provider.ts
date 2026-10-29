@@ -4,7 +4,7 @@ export interface Task {
   id: string;
   title: string;
   done: boolean;
-};
+}
 
 function makeId() {
   return Math.random().toString(36).slice(2, 9);
@@ -15,7 +15,7 @@ export const tasksRepository = createProvider({
   expose: async () => {
     // Fake in-memory store
     const store: Task[] = [
-      { id: "t1", title: "Read Stratify docs", done: false }
+      { id: "t1", title: "Read Stratify docs", done: false },
     ];
 
     return {
@@ -26,7 +26,7 @@ export const tasksRepository = createProvider({
         const task = { id: makeId(), title, done: false };
         store.push(task);
         return task;
-      }
+      },
     };
-  }
+  },
 });

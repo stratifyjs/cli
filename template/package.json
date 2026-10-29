@@ -11,19 +11,19 @@
     "test": "tsx --test"
   },
   "dependencies": {
-    "@fastify/cors": "^11.3.0",
+    "@fastify/cors": "^11.3.1",
     "@sinclair/typebox": "^0.34.52",
-    "@stratify/core": "^0.2.8",
+    "@stratify/core": "^0.2.9",
     "close-with-grace": "2.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
-    "@types/node": "^26.4.1",
+    "@types/node": "^26.6.6",
     "eslint": "^9.39.5",
     "eslint-plugin-import": "^2.32.0",
-    "prettier": "3.9.6",
-    "tsx": "^4.23.13",
+    "prettier": "3.9.10",
+    "tsx": "^4.23.15",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.69.0"
+    "typescript-eslint": "^8.72.1"
   }
 }

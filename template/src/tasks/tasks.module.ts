@@ -9,5 +9,5 @@ export const tasksModule = createModule({
   controllers: [tasksController],
   hooks: [httpHooks],
   installers: [corsInstaller],
-  subModules: []
+  subModules: [],
 });

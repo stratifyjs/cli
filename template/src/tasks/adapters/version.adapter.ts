@@ -5,5 +5,5 @@ import { createAdapter } from "@stratify/core";
  */
 export const versionAdapter = createAdapter({
   name: "version", // optional, used by tree printer
-  expose: ({ fastify }) => fastify.version
+  expose: ({ fastify }) => fastify.version,
 });
